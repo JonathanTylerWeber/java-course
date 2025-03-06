@@ -113,7 +113,7 @@ public class Main {
     // abstract class: provides partial implementation w concrete methods
     // interface: no implementation pre java 8, default and static methods allowed from java 8
 
-    // whent to use:
+    // when to use:
     // abstract class: common base class with shared code and behavior
     // interface: defining a contract especially when multiple inheritance is needed
 
@@ -136,7 +136,7 @@ public class Main {
 
     // Encapsulation: binding methods and vars
     // encapsulation in oop bundles data and methods into a class, 
-    // restricting direct acces using access specifiers like private, protected, public
+    // restricting direct access using access specifiers like private, protected, public
 
     // key benefits, data hiding: protects internal state from unatuhorized access
     // modularity
