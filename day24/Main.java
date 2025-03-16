@@ -1,9 +1,11 @@
 package day24;
 
+import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -151,29 +153,208 @@ public class Main {
     // BufferedInputStream: similar but does in chunks of data, more efficient
     // DataInputStream: reads primitive data types. consistent handling of structured data
 
+    // InputStream fileStream = new FileInputStream("day24/src/main/resources/output3.bin");
 
-    // InputStream fileStream = Main.class.getClassLoader().getResourceAsStream("output3.bin");
-    // InputStream fileStream = Main.class.getClassLoader().getResourceAsStream("resources/output3.bin");
-    InputStream fileStream = new FileInputStream("day24/src/main/resources/output3.bin");
+    // // if (fileStream == null) {
+    // //   System.out.println("file doesnt exist");
+    // //   return;
+    // // }
+
+    // try(DataInputStream dis = new DataInputStream(fileStream)) {
+    //   double doubleValue = dis.readDouble();
+    //   String stringValue = dis.readUTF();
+
+    //   System.out.println("double: " + doubleValue + ", string: " + stringValue);
+
+    // } catch (IOException e) {
+    //   throw new RuntimeException(e);
+    // }
+
+
+
+    // 
+    // 
+    // 
+
+    // buffered input stream
+    // InputStream fileStream = new FileInputStream("day24/src/main/resources/output.txt");
+
+    // try(BufferedInputStream bis = new BufferedInputStream(fileStream)) {
+    //   int data;
+    //   while((data = bis.read()) != -1){
+    //     System.out.print((char)data);
+    //   }
+
+
+    // } catch (IOException e) {
+    //   throw new RuntimeException(e);
+    // }
+
+
+
+    // 
+    // 
+    // 
+
+    // create file
+
+    // String filePath = "day24/src/main/resources/newFile.txt";
+    // String renamedFilePath = "day24/src/main/resources/newFileChanged.txt";
+
+    // File file = new File(filePath);
+    // if(file.exists()){
+    //   System.out.println("File exists");
+    // } else {
+    //   System.out.println("File doesn't exist, creating...");
+    //   try {
+    //     if(file.createNewFile()){
+    //       System.out.println("File created " + file.getName());
+    //     } else {
+    //       System.out.println("failed to create file");
+    //     }
+    //   } catch (IOException e) { 
+    //     System.out.println("an error occured while creating file");
+    //     e.printStackTrace();
+    //   }
+    // }
+
+    // System.out.println("File Name: " + file.getName());
+    // System.out.println("File Path: " + file.getPath());
+
+
+
+    // 
+    // rename file
+
+
+    // String filePath2 = "day24/src/main/resources/newFile.txt";
+    // String renamedFilePath = "day24/src/main/resources/newFileChanged.txt";
+
+    // File file = new File(filePath2);
+    // if(file.exists()){
+    //   System.out.println("File exists");
+    // } else {
+    //   System.out.println("File doesn't exist, creating...");
+    //   try {
+    //     if(file.createNewFile()){
+    //       System.out.println("File created " + file.getName());
+    //     } else {
+    //       System.out.println("failed to create file");
+    //     }
+    //   } catch (IOException e) { 
+    //     System.out.println("an error occured while creating file");
+    //     e.printStackTrace();
+    //   }
+    // }
+
+    // File renamedFile = new File(renamedFilePath);
+    // if(file.renameTo(renamedFile)){
+    //   System.out.println("File renamed: " + renamedFile.getName());
+    // } else {
+    //   System.out.println("file renaming failed");
+    // }
+
+
+
+    // 
+    // delete files
+
+    // String filePath2 = "day24/src/main/resources/newFile.txt";
+    // String renamedFilePath = "day24/src/main/resources/newFileChanged.txt";
+
+    // File file = new File(filePath2);
+    // if(file.exists()){
+    //   System.out.println("File exists");
+    // } else {
+    //   System.out.println("File doesn't exist, creating...");
+    //   try {
+    //     if(file.createNewFile()){
+    //       System.out.println("File created " + file.getName());
+    //     } else {
+    //       System.out.println("failed to create file");
+    //     }
+    //   } catch (IOException e) { 
+    //     System.out.println("an error occured while creating file");
+    //     e.printStackTrace();
+    //   }
+    // }
+
+    // File renamedFile = new File(renamedFilePath);
+    // if(file.renameTo(renamedFile)){
+    //   System.out.println("File renamed: " + renamedFile.getName());
+    // } else {
+    //   System.out.println("file renaming failed");
+    // }
+
+    // if (renamedFile.delete()){
+    //   System.out.println("file deleted: " + renamedFile.getName());
+    // } else {
+    //   System.out.println("error deleting file");
+    // }
+
+
+
+    // 
+    // 
+    // create paths(folder/directories)
+    // String dirPath = "day24/src/main/resources/file";
+    //     String nestedDirPath = "day24/src/main/resources/file/subdir1/subdir2";
+
+    //     File dir = new File(dirPath);
+    //     if (!dir.exists()) {
+    //         if (dir.mkdir()) {
+    //             System.out.println("Directory created: " + dir.getName());
+    //         } else {
+    //             System.out.println("Failed to create dir");
+    //         }
+    //     } else {
+    //         System.out.println("dir already exists");
+    //     }
+
+    //     File nestedDirs = new File(nestedDirPath);
+    //     if (!nestedDirs.exists()) {
+    //         if (nestedDirs.mkdirs()) {
+    //             System.out.println("Directories created: " + nestedDirs.getName());
+    //         } else {
+    //             System.out.println("Failed to create dirs");
+    //         }
+    //     } else {
+    //         System.out.println("dirs already exists");
+    //     }
 
 
 
 
-    if (fileStream == null) {
-      System.out.println("file doesnt exist");
-      return;
-    }
+    // 
+    // show all files in folder
+    // String dirPath = "day24/src/main/resources";
+    // File dir = new File(dirPath);
 
-    try(DataInputStream dis = new DataInputStream(fileStream)) {
-      double doubleValue = dis.readDouble();
-      String stringValue = dis.readUTF();
+    // File[] files = dir.listFiles();
+    // if(files != null && files.length>0){
+    //   for(File f : files){
+    //     System.out.println(f.getName());
+    //   }
+    // }
 
-      System.out.println("double: " + doubleValue + ", string: " + stringValue);
 
-    } catch (IOException e) {
-      throw new RuntimeException(e);
-    }
 
+
+    // 
+    // 
+
+
+    // serialization and deserialization
+    // serialization converts object into a byte stream allowing it to be saved to a file transmitted over a network or stored in a db
+    // deserialization converts byte stream back into original object
+    // *** must serialize to store objects!!
+
+    // keeps object state and transferring between different parts of an app or across different systems
+    // uses serializable interface to enable serialization and deserialization
+
+    // allows you to save state of object (persistence)
+    // can transmit objects over networks
+    // caching, store serialized objects for faster future access
 
   }
 }
