@@ -8,18 +8,18 @@ public class Main {
 
 
     // can do this with generic type instead of separate printers for each type
-    Printer<Float> floatPrinter = new Printer<Float>(3.14f);
+    Printer<Float> floatPrinter = new Printer<>(3.14f);
     floatPrinter.print();
 
-    Printer<Double> doublePrinter = new Printer<Double>(122.23);
+    Printer<Double> doublePrinter = new Printer<>(122.23);
     doublePrinter.print();
 
-    Printer<String> stringPrinter = new Printer<String>("howdy");
+    Printer<String> stringPrinter = new Printer<>("howdy");
     stringPrinter.print();
 
 
     // bounded
-    NumberPrinter<Double> numberPrinter = new NumberPrinter<Double>(132.0);
+    NumberPrinter<Double> numberPrinter = new NumberPrinter<>(132.0);
     numberPrinter.print();
 
     // can only do numbers (cant do strings)
@@ -29,7 +29,7 @@ public class Main {
 
     print2(123, "Hello");
     
-
+    
   }
 
 
