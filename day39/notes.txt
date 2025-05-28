@@ -1,0 +1,37 @@
+Java SpringBoot
+
+Spring vs SpringBoot
+
+***
+Spring is a framework providing tools to build flexible apps but requires setup
+Pros:
+  full control and customization
+  flexible for adding features
+Cons:
+  requires complex setup
+
+***
+SpringBoot simplifies setup and configuration
+
+
+key benefits of SpringBoot over Spring:
+1. Auto configuration:
+  Spring: requires manual setup for components
+  SpringBoot: automatically configures components for you
+2. Embedded Servers:
+  Spring: needs an external server for deployment
+  SpringBoot: has a built in server for easy deployment
+3. Starters: 
+  Spring: deps must be added manually
+  SpringBoot: offers pre-configured starter packages
+4. opinionated defaults:
+  Spring: full manual config control
+  SpringBoot: provides best practice defaults automatically
+5. Actuator:
+  Spring: requires extra setup for monitoring
+  SpringBoot: comes with built in monitoring tools
+6. MicroServices Ready:
+  Spring: more setup needed for MicroServices
+  SpringBoot: simplifies MicroServices development
+
+

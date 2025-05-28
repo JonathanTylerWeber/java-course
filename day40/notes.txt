@@ -1,0 +1,17 @@
+http : protocol for data exchange between browsers and servers
+hypertext transfer protocol
+
+api
+application programming interface
+lets 2 software programs communicate by following set rules, often via http requests
+
+REST 
+Representational State transfer
+design style for creating web services using http methods
+
+restful design principles:
+  - client-server architecture: ui is separate from the backend, allowing independent evolution
+  - statelessness: every request contains all info needed, server doesnt store session data
+  - cacheable: clients can store responses to reduce repeated requests and improve performance
+  - uniform interface: rest apis use consistent http methods, simplifying interactions with resources
+  
