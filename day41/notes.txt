@@ -21,3 +21,63 @@ in jackson represents a modifiable json object
 
 typecasting allows modifying fields in the json structure
 
+
+
+Annotations and Lombok for handling JSON
+Jackson annotations
+annotations in java guide how jackson handles json serialization and deserialization for objects
+examples:
+  -@JsonProperty: maps json field to java field
+    @JsonProperty("full_name")
+    private String name;
+  
+  -@JsonIgnore : excludes field from json
+    @JsonIgnore
+    private String password;
+  
+  -@JsonInclude: controls field inclusion in json (example only included if not null)
+    @JsonInclude(JsonInclude.Inlcude.NON_NULL)
+    private String address;
+  
+  -@JsonIgnoreProperties: ignores properties for a class
+    @JsonIgnoreProperties({"age", "gender"})
+    public class User {
+      // fields
+    }
+  
+  -@JsonFormat: specifies format for field
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyy-MM-dd")
+    private Date birthDate;
+
+  -@JsonCreator: marks method/constructor for deserialization
+    @JsonCreator
+    public User(@JsonProperty("name") String name) {
+      this.name = name
+    }
+
+  -@JsonSetter: sets json property using a method
+    @JsonSetter("full_name")
+    public void setName(String name){
+      this.name = name;
+    }
+
+  -@JsonGetter: gets property for json serialization
+    @JsonGetter("full_name")
+    public void getName(){
+      return name;
+    }
+
+****************
+Lombok
+simplifies java by auto generating getters, setters, and construcotrs, reducing boiler plate code
+  @Getter: automatically generates the getter method for the annotated field
+  @Setter: automatically generates the setter method for the annotated field
+
+
+
+  
+
+
+
+  
+

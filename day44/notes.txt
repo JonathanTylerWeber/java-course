@@ -1,0 +1,71 @@
+Spring Data Access
+- simplifies db interaction by automating tasks like managing connections and writing queries
+
+DataSource
+manages db connections in Spring automatically
+
+DAO
+Data Access Object
+design pattern separating db logic from business logic for cleaner code
+
+ORM
+Object Relational mapping
+Maps java objects to db tables automatically
+
+Repository
+Provides methods for db operations without needing sql
+
+sql
+Structured Query Language
+standard language to interact with dbs
+SELECT
+INSERT
+UPDATE
+DELETE
+
+***********
+how Spring Data Access helps
+automates db interaction, simplifying tasks liek connection management and query generation
+
+
+JDBC
+Java DB Connectivity
+- jdbc is the core way java apps communicate with dbs, requiring detailed steps for each interaction
+1. open connection: link java to db
+2. send query: execute sql instructions
+3. process result: handle the returned data or confirmation
+- while it gives full control, you must do everything manually
+
+
+Spring Data JPA
+Java Persistence API
+- simplifies db operations by using Java objects instead of writing sql. it converts java objects to db rows automatically
+- based off of ORMs
+- @Entity defines class as a db table
+- @Id identifies property id as primary key
+- other fields become table columns
+- entityManager.persist(): jpa automatically generates sql insert query and saves the object to the db
+
+*******
+Hibernate
+- enhances jpa with powerful features for efficient db operations
+why use?
+  - caching: reduces queries by storing frequently used data
+  - lazy loading : loads data only when needed
+  - auto table creation: automatically generates tables from java classes
+
+******
+H2 Database
+- lightweight, open source relational db for testing or small apps. it operates in :
+  - embedded mode: runs inside your apps
+  - server mode: acts as a standalone server
+
+- in memory: data only lasts during runtime
+- embedded: self contained for small apps
+- sql support: standard sql queries
+- web console: web based management
+
+- commonly used in devlopment and testing
+- well suited for small apps
+
+
